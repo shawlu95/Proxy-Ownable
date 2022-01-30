@@ -1,7 +1,7 @@
 # Proxy-Ownable
  
 How to run
-``bash
+```bash
 npm install
 npx hardhat test
 ```
