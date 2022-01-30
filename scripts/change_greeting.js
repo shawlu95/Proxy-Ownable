@@ -14,7 +14,9 @@ async function main() {
   console.log("Greeter deployed to:", greeter.address);
 
   // Owner change greeting message
-  await greeter.setGreeting("Hello again!");
+  const tx = await greeter.setGreeting("Hello again!");
+  await tx.wait();
+
   console.log("Owner address:", await greeter.owner());
   console.log("Owner change greeting message:", await greeter.greet());
 }

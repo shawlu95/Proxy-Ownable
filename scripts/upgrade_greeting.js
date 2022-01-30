@@ -13,7 +13,9 @@ async function main() {
   console.log("Greeter upgraded:", greeterV2.address);
   console.log("Old message should still be there:", await greeterV2.greet());
 
-  await greeterV2.resetGreeting();
+  const tx = await greeterV2.resetGreeting();
+  await tx.wait();
+
   console.log("New function reset greeting:", await greeterV2.greet());
 }
 
