@@ -1,0 +1,13 @@
+@@ -0,0 +1,12 @@
+__pycache__
+.env
+.history
+.hypothesis/
+build/
+reports/
+data/
+.DS_Store
+artifacts/
+cache/
+node_modules/
+package-lock.json
