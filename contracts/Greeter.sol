@@ -9,7 +9,7 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 contract Greeter is OwnableUpgradeable {
     string private greeting;
 
-    // replace: 
+    // replace:
     // constructor(string memory _greeting) {
     //     console.log("Deploying a Greeter with greeting:", _greeting);
     //     greeting = _greeting;
@@ -17,10 +17,10 @@ contract Greeter is OwnableUpgradeable {
 
     function initialize(string memory _greeting) public initializer {
         console.log("Deploying a Greeter with greeting:", _greeting);
-        __Ownable_init();
+        __Context_init_unchained();
+        __Ownable_init_unchained();
         greeting = _greeting;
     }
-
 
     function greet() public view returns (string memory) {
         return greeting;
